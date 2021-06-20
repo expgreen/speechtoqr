@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:andrid="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".MainActivity"
+    android:orientation="horizontal"
+    tools:ignore="ExtraText">
+
+
+
+
+
+    <Button
+        android:id="@+id/ButtonRecog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start"
+        android:textSize="12dp"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:id="@+id/ButtonRead"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ButtonStyle"
+        android:text="read"
+        android:textSize="12dp"/>
+
+
+
+
+
+
+
+
+</LinearLayout>
