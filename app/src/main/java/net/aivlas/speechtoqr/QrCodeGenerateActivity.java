@@ -45,8 +45,8 @@ public class QrCodeGenerateActivity extends AppCompatActivity {
 
 
 
-        //String data = "http://osa030.hatenablog.com/";
-        int size = 500;
+
+        int size = 900;//500
         try {
             BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
             Bitmap bitmap = barcodeEncoder.encodeBitmap(data, BarcodeFormat.QR_CODE, size, size,encodeHint);

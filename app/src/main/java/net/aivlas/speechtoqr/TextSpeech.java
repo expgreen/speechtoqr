@@ -8,6 +8,7 @@ import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.Locale;
 
@@ -79,9 +80,27 @@ public class TextSpeech extends Activity
     private void speechText() {
         //String string = ((EditText) findViewById(R.id.EditTextSpeech)).getText().toString();
         Intent intent = getIntent();
-        String string = intent.getStringExtra("qrword");
-        assert string != null;
-        if (0 < string.length()) {
+
+
+
+
+        String  string = intent.getStringExtra("qrword");
+
+
+
+        EditText edit = (EditText) findViewById(R.id.EditTextSpeech);
+        edit.setText(string);
+        //assert string != null;
+        int num = 0;
+        try {
+            num = string.length();
+        } catch (Exception e) {
+            num =1;
+            string ="no_content";
+            e.printStackTrace();
+        } finally {
+        }
+        if (0 < num) {
             if (tts.isSpeaking()) {
                 // 読み上げ中なら止める
                 tts.stop();

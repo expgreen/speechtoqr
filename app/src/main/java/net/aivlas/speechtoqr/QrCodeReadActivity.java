@@ -30,6 +30,9 @@ public class QrCodeReadActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplication(),TextSpeech.class);
 
                 String word = result;
+                if((word == null)||(word == "")){// qrcodeを読み込まない場合
+                    word = "nocontent";
+                }
                 intent.putExtra("qrword",word);
                 startActivity(intent);
             }
@@ -41,7 +44,11 @@ public class QrCodeReadActivity extends AppCompatActivity {
             public void barcodeResult(BarcodeResult barcodeResult) {
 
                 TextView textView = (TextView)findViewById(R.id.textView);
+
                 result = barcodeResult.getText();
+
+
+
                 textView.setText(result);
             }
 

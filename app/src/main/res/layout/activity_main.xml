@@ -7,7 +7,7 @@
     xmlns:andrid="http://schemas.android.com/apk/res-auto"
 
     tools:context=".MainActivity"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:ignore="ExtraText">
 
 
@@ -25,7 +25,7 @@
     <Button
         android:id="@+id/ButtonRead"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="ButtonStyle"
         android:text="read"
         android:textSize="12dp"/>

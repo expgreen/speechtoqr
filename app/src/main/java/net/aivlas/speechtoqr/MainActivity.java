@@ -13,11 +13,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.ButtonRecog).setOnClickListener(this);
-        //findViewById(R.id.ButtonRead)
+        findViewById(R.id.ButtonRead).setOnClickListener(this);
     }
 
     public void onClick(View view){
-        Intent intent = new Intent(this, SpeechRecognizerEx.class);  //インテントの作成
-        startActivity(intent);                                 //画面遷移
+        if(view !=null) {
+            switch (view.getId()) {
+                case R.id.ButtonRecog :
+                    Intent intentRecog = new Intent(this, SpeechRecognizerEx.class);  //インテントの作成
+                    startActivity(intentRecog); //画面遷移
+                    break;
+
+                case R.id.ButtonRead :
+                    Intent intentQrRead = new Intent(this, QrCodeReadActivity.class);  //インテントの作成
+                    startActivity(intentQrRead); //画面遷移
+                    break;
+            }
+        }
     }
 }
